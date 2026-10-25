@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="اتصال به SQL Server"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtServer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="آدرس سرور (IP یا دامنه)"
+            android:inputType="textUri"
+            android:textDirection="ltr" />
+
+        <EditText
+            android:id="@+id/edtPort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="پورت (پیش‌فرض 1433)"
+            android:inputType="number"
+            android:textDirection="ltr" />
+
+        <EditText
+            android:id="@+id/edtInstance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="نام Instance (اختیاری)"
+            android:inputType="text"
+            android:textDirection="ltr" />
+
+        <EditText
+            android:id="@+id/edtDb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="نام دیتابیس"
+            android:inputType="text"
+            android:textDirection="ltr" />
+
+        <EditText
+            android:id="@+id/edtUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="نام کاربری"
+            android:inputType="text"
+            android:textDirection="ltr" />
+
+        <EditText
+            android:id="@+id/edtPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="رمز عبور"
+            android:inputType="textPassword"
+            android:textDirection="ltr" />
+
+        <CheckBox
+            android:id="@+id/chkSsl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="استفاده از رمزنگاری SSL (فقط در صورت نیاز)" />
+
+        <ProgressBar
+            android:id="@+id/progressSettings"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btnTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تست اتصال" />
+
+        <Button
+            android:id="@+id/btnSaveSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ذخیره تنظیمات" />
+    </LinearLayout>
+</ScrollView>
